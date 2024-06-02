@@ -39,27 +39,103 @@
 //დაამატეთ მეთოდები "deposit" და "withdraw" თანხის შეტანა-გამოტანისთვის. შესატან ან გამოსატან 
 //თანხას მეთორები უნდა იღებდნენ პარამეტრად. bonus: თუ გამოსატანი თანხა მეტია  არსებულ ბალანსზე, 
 //გმოიტანეთ შესაბამისი შეტყობინება.
-
-
+// class BankAccount {
+//     #balance;
+//     constructor(initialBalance){
+//         this.#balance = initialBalance
+//     }
+//     deposit(amount){
+//         if(amount > 0){
+//             this.#balance += amount
+//             console.log(`deposited ${amount}. new balance ${this.#balance}`)
+//         }else{
+//             console.log('depositi meti unda ikos 0ze')
+//         }
+//     }
+//     withdraw(amount){
+//         if(amount > 0){
+//             if(amount <= this.#balance){
+//                 this.#balance -=amount
+//                 console.log(`Withdrew: ${amount}. New balance: ${this.#balance}`);
+//             }else{
+//                 console.log('gatanis tanxa balansze metia');
+//             }
+//         }else{
+//             console.log('gasatani tanxa unda ikos 0is meti');
+//         }
+//     }
+//     getBalance(){
+//         return this.#balance
+//     }
+// }
+// let account = new BankAccount(100)
+// console.log(account)
+// account.deposit(50);        
+// account.withdraw(30);     
+// account.withdraw(200);   
+// console.log(account.getBalance()); 
 //4. პოლიმორფიზმი:  შემქენით კლასი "Shape", რომელშიც იქნება მეთოდი სახელად "calculateArea". 
 //შექმენით ქვეკლასები "Circle" და "Rectangle", რომლებშიც ახლადშექმნილ მეთოდს გადააწერთ მშობლის მეთოდს.
 
 
 //5. სტატიკური მეთოდი: შექმენით კლასი "Calculator" სტატიკური მეთოდით, რომელიც პარამეტრად მიიღებს
 // ორ რიცხვს და დააბრუნებს მათ ჯამს.
-
+// class Calculator{
+//     static getNumbers(num1,num2){
+//         return num1 + num2
+//     }
+// }
+// console.log(Calculator.getNumbers(10,20))
 
 //6. Getter and Setter: შექმენით კლასი "Temperature" private ფორფერთით - "celsius".
 // დაამატეთ getter და setter მეთოდები. getter მეთოდი უნდა აბრუნებდეს celsius ფროფერთის.
 // setter მეთოდი პარამეტრად უნდა იღებდეს ფარენჰეიტს, გადაჰყავდეს ცელსიუსში და ანიჭებდეს მიღებულ
 // მნიშვნელობას celsius ფროფერთის.
+// class Temperature{
+//     #celsius
+//     constructor(celsius){
+//         this.#celsius = celsius
+//     }
+//     get Celsius(){
+//         return this.#celsius
+//     }
+//     set Celsius(value){
+//         this.#celsius = value;
+//     }
+//     get fahrenheit(){
+//         return (this.#celsius * 9/5) + 32
+//     }
+//     set fahrenheit(value){
+//         this.#celsius = (value - 32) * 5 / 9;
+//     }
+// }
+// let temp = new Temperature(25);
+// console.log(temp.Celsius);   
+// console.log(temp.fahrenheit);
 
+// temp.fahrenheit = 100;
+// console.log(temp.Celsius);    
+// console.log(temp.fahrenheit);
 
-//7. შექმენით კლასი - "ArrayHelper" მეთოდით "reverseArray", რომელიც პარამეტრად იღებს მასივს და
+//7. შექმენით კლასი - "ArrayHelper" მეთოდით "rever  seArray", რომელიც პარამეტრად იღებს მასივს და
 // აბრუნებს მის შებრუნებულ ვერსიას.
+// class ArrayHelper{
+//     constructor(initialArray){
+//         this.array = initialArray
+//     }
+//     reverseArray(){
+//         this.array.reverse()
+//         return this.array
+//     }
+    
+// }
+// let arrayHelper = new ArrayHelper([1, 2, 3, 4, 5]);
+// let reversedArray = arrayHelper.reverseArray();
+// console.log(reversedArray);
 
+    //8. შექმენით კლასი "Circle", რომელიც დააგენერირებს ობიექტებს "radius" ფროფერთით. დაამატეთ 
+    //მეთოდები წრის ფართობისა და პერიმეტრის გასაგებად. შექმენით "createCircle" მეთოდი, რომელიც
+    // დააბრუნებს რაიმე რადიუსის მქონე წრის ობიექტს. (ახალი წრე შექმენით Circle კლასიდან)
+class Circle{
 
-//8. შექმენით კლასი "Circle", რომელიც დააგენერირებს ობიექტებს "radius" ფროფერთით. დაამატეთ 
-//მეთოდები წრის ფართობისა და პერიმეტრის გასაგებად. შექმენით "createCircle" მეთოდი, რომელიც
-// დააბრუნებს რაიმე რადიუსის მქონე წრის ობიექტს. (ახალი წრე შექმენით Circle კლასიდან)
-
+}
