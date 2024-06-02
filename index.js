@@ -76,8 +76,44 @@
 // console.log(account.getBalance()); 
 //4. პოლიმორფიზმი:  შემქენით კლასი "Shape", რომელშიც იქნება მეთოდი სახელად "calculateArea". 
 //შექმენით ქვეკლასები "Circle" და "Rectangle", რომლებშიც ახლადშექმნილ მეთოდს გადააწერთ მშობლის მეთოდს.
-
-
+   // Parent class
+class Shape {
+    // Method to calculate area
+    calculateArea() {
+      return 0; // Default implementation returns 0
+    }
+  }
+  
+  // Subclass Circle
+  class Circle extends Shape {
+    constructor(radius) {
+      super();
+      this.radius = radius;
+    }  
+    calculateArea() {
+      return Math.PI * this.radius ** 2; 
+    }
+  }
+  
+  class Rectangle extends Shape {
+    constructor(width, height) {
+      super();
+      this.width = width;
+      this.height = height;
+    }
+  
+  
+    calculateArea() {
+      return this.width * this.height;
+    }
+  }
+  
+  const circle = new Circle(5);
+  console.log("Area of Circle:", circle.calculateArea());
+  
+  const rectangle = new Rectangle(4, 6);
+  console.log("Area of Rectangle:", rectangle.calculateArea()); 
+  
 //5. სტატიკური მეთოდი: შექმენით კლასი "Calculator" სტატიკური მეთოდით, რომელიც პარამეტრად მიიღებს
 // ორ რიცხვს და დააბრუნებს მათ ჯამს.
 // class Calculator{
@@ -136,6 +172,28 @@
     //8. შექმენით კლასი "Circle", რომელიც დააგენერირებს ობიექტებს "radius" ფროფერთით. დაამატეთ 
     //მეთოდები წრის ფართობისა და პერიმეტრის გასაგებად. შექმენით "createCircle" მეთოდი, რომელიც
     // დააბრუნებს რაიმე რადიუსის მქონე წრის ობიექტს. (ახალი წრე შექმენით Circle კლასიდან)
-class Circle{
+//     class Circle {
+//         constructor(radius) {
+//           this.radius = radius;
+//         }
 
-}
+//         calculateArea() {
+//           return Math.PI * this.radius ** 2;
+//         }
+
+//         calculatePerimeter() {
+//           return 2 * Math.PI * this.radius;
+//         }
+
+//         static createCircle(radius) {
+//           return new Circle(radius);
+//         }
+//       }
+//       const circle = new Circle(5); 
+// console.log("area circle:", circle.calculateArea()); 
+// console.log("Perimeter  Circle:", circle.calculatePerimeter()); 
+
+// const anotherCircle = Circle.createCircle(10); 
+// console.log("Area of Another Circle:", anotherCircle.calculateArea());
+// console.log("Perimeter of Another Circle:", anotherCircle.calculatePerimeter()); 
+      
