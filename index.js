@@ -77,42 +77,7 @@
 //4. პოლიმორფიზმი:  შემქენით კლასი "Shape", რომელშიც იქნება მეთოდი სახელად "calculateArea". 
 //შექმენით ქვეკლასები "Circle" და "Rectangle", რომლებშიც ახლადშექმნილ მეთოდს გადააწერთ მშობლის მეთოდს.
    // Parent class
-class Shape {
-    // Method to calculate area
-    calculateArea() {
-      return 0; // Default implementation returns 0
-    }
-  }
-  
-  // Subclass Circle
-  class Circle extends Shape {
-    constructor(radius) {
-      super();
-      this.radius = radius;
-    }  
-    calculateArea() {
-      return Math.PI * this.radius ** 2; 
-    }
-  }
-  
-  class Rectangle extends Shape {
-    constructor(width, height) {
-      super();
-      this.width = width;
-      this.height = height;
-    }
-  
-  
-    calculateArea() {
-      return this.width * this.height;
-    }
-  }
-  
-  const circle = new Circle(5);
-  console.log("Area of Circle:", circle.calculateArea());
-  
-  const rectangle = new Rectangle(4, 6);
-  console.log("Area of Rectangle:", rectangle.calculateArea()); 
+
   
 //5. სტატიკური მეთოდი: შექმენით კლასი "Calculator" სტატიკური მეთოდით, რომელიც პარამეტრად მიიღებს
 // ორ რიცხვს და დააბრუნებს მათ ჯამს.
